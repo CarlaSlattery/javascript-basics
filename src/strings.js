@@ -1,23 +1,25 @@
-function sayHello(string) {}
+function sayHello(string) {
+  return `Hello, ${string}!`;
+}
 
 function uppercase(string) {
-  return string.toUppercase();
+  return string.toUpperCase();
 }
 
 function lowercase(string) {
-  return string.toLowercase;
+  return string.toLowerCase();
 }
 
 function countCharacters(string) {
-  // your code here
+  return string.length;
 }
 
 function firstCharacter(string) {
-  // your code here
+  return string[0];
 }
 
 function firstCharacters(string, n) {
-  // your code here
+  return string.substring(0, 3);
 }
 
 module.exports = {

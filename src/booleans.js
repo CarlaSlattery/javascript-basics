@@ -10,10 +10,12 @@ function either(a, b) {
   return a || b;
 }
 
-function none(a, b) {}
+function none(a, b) {
+  return !a && !b;
+}
 
 function one(a, b) {
-  // your code here
+  return (a && !b) || (!a && b);
 }
 
 function truthiness(a) {
@@ -35,25 +37,42 @@ function isLessThanOrEqualTo(a, b) {
 function isOdd(a) {
   if (a % 2 !== 0) {
     return true;
+  } else {
+    return false;
   }
 }
 
 function isEven(a) {
   if (a % 2 === 0) {
     return true;
+  } else {
+    return false;
   }
 }
 
 function isSquare(a) {
-  // your code here
+  if (a >= 0 && Math.sqrt(a) % 1 === 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function startsWith(char, string) {
-  // your code here
+  if (char === string[0]) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function containsVowels(string) {
-  // your code here
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  if (string.includes(vowels)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function isLowerCase(string) {

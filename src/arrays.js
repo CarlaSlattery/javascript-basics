@@ -1,5 +1,5 @@
 const getNthElement = (index, array) => {
-  // your code here
+  return array[index % array.length];
 };
 
 const arrayToCSVString = array => {
@@ -30,9 +30,7 @@ const uppercaseWordsInArray = strings => {
   // your code here
 };
 
-const reverseWordsInArray = strings => {
-  // your code here
-};
+const reverseWordsInArray = strings => {};
 
 const onlyEven = numbers => {
   // your code here
