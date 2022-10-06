@@ -3,34 +3,41 @@ const getNthElement = (index, array) => {
 };
 
 const arrayToCSVString = array => {
-  // your code here
+  return array.toString();
 };
 
 const csvStringToArray = string => {
-  // your code here
+  return string.split(',');
 };
 
 const addToArray = (element, array) => {
-  // your code here
+  array.push(element);
 };
 
 const addToArray2 = (element, array) => {
-  // your code here
+  const newArray = [...array, element];
+  return newArray;
 };
 
 const removeNthElement = (index, array) => {
-  // your code here
+  array.splice(index, array);
 };
 
-const numbersToStrings = numbers => {
-  // your code here
-};
+const numbersToStrings = numbers => {};
 
 const uppercaseWordsInArray = strings => {
   // your code here
 };
 
-const reverseWordsInArray = strings => {};
+const reverseWordsInArray = strings => {
+  const reverseArr = string => {
+    string
+      .split('')
+      .reverse()
+      .join();
+  };
+  return strings.map(reverseArr);
+};
 
 const onlyEven = numbers => {
   // your code here
@@ -45,11 +52,11 @@ const elementsStartingWithAVowel = strings => {
 };
 
 const removeSpaces = string => {
-  // your code here
+  string.split(' ').join('');
 };
 
 const sumNumbers = numbers => {
-  // your code here
+  let array = [];
 };
 
 const sortByLastLetter = strings => {

@@ -19,7 +19,11 @@ function one(a, b) {
 }
 
 function truthiness(a) {
-  return a;
+  if (a !==0 || a !=='') || a !==undefined || a !==null {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function isEqual(a, b) {
@@ -66,18 +70,21 @@ function startsWith(char, string) {
   }
 }
 
+
 function containsVowels(string) {
-  const vowels = ['a', 'e', 'i', 'o', 'u'];
-  if (string.includes(vowels)) {
+  const regEx = /[a,e,i,o,u]/i;
+  if (string.match(regEx)) {
     return true;
-  } else {
-    return false;
   }
 }
 
 function isLowerCase(string) {
-  // your code here
-}
+  if (string !== string.toUpperCase())
+    return true;
+  } else {
+    return false;
+  }
+
 
 module.exports = {
   negate,
