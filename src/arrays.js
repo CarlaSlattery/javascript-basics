@@ -19,46 +19,58 @@ const addToArray2 = (element, array) => {
   return newArray;
 };
 
+//not correct currently
 const removeNthElement = (index, array) => {
-  array.splice(index, array);
+  const remove = [array.splice(index)];
+  return remove;
 };
 
-const numbersToStrings = numbers => {};
+const numbersToStrings = numbers => {
+  const numbersArr = number => {
+    return number.toString();
+  };
+  return numbers.map(numbersArr);
+};
 
 const uppercaseWordsInArray = strings => {
-  // your code here
+  const makeUpper = string => {
+    return string.toUpperCase();
+  };
+  return strings.map(makeUpper);
 };
 
 const reverseWordsInArray = strings => {
   const reverseArr = string => {
-    string
+    return string
       .split('')
       .reverse()
-      .join();
+      .join('');
   };
   return strings.map(reverseArr);
 };
 
 const onlyEven = numbers => {
-  // your code here
+  //your code here
 };
 
 const removeNthElement2 = (index, array) => {
   // your code here
 };
 
+//started - not finished
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  for (let i = 0; i < strings.length; i++);
 };
 
+//not correct currently
 const removeSpaces = string => {
   string.split(' ').join('');
 };
 
 const sumNumbers = numbers => {
-  let array = [];
+  //reduce method needed
+  //your code here
 };
-
 const sortByLastLetter = strings => {
   // your code here
 };
