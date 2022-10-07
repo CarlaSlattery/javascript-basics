@@ -21,8 +21,7 @@ const addToArray2 = (element, array) => {
 
 //not correct currently
 const removeNthElement = (index, array) => {
-  const remove = [array.splice(index)];
-  return remove;
+  const newArray = element => element.splice();
 };
 
 const numbersToStrings = numbers => {
@@ -50,29 +49,33 @@ const reverseWordsInArray = strings => {
 };
 
 const onlyEven = numbers => {
-  //your code here
+  const myArray = num => {
+    return num % 2 === 0;
+  };
+  return numbers.filter(myArray);
 };
 
-const removeNthElement2 = (index, array) => {
-  // your code here
-};
+const removeNthElement2 = (index, array) => {};
 
-//started - not finished
+//not working
 const elementsStartingWithAVowel = strings => {
-  for (let i = 0; i < strings.length; i++);
+  const vowels = 'aeiou';
+  return vowels.includes(strings.charAt(0));
 };
 
-//not correct currently
 const removeSpaces = string => {
-  string.split(' ').join('');
+  return string.replace(/ /g, '');
 };
-
+//not working
 const sumNumbers = numbers => {
-  //reduce method needed
-  //your code here
+  const array = sumNumbers.reduce((acc, val) => acc + val, 0);
+  return numbers(array);
 };
+//not working
 const sortByLastLetter = strings => {
-  // your code here
+  strings
+    .split('')
+    .sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1));
 };
 
 module.exports = {
