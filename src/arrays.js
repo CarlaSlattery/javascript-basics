@@ -1,3 +1,4 @@
+/* eslint-disable spaced-comment */
 const getNthElement = (index, array) => {
   return array[index % array.length];
 };
@@ -19,9 +20,8 @@ const addToArray2 = (element, array) => {
   return newArray;
 };
 
-//not correct currently
 const removeNthElement = (index, array) => {
-  const newArray = element => element.splice();
+  return array.splice(index, 1);
 };
 
 const numbersToStrings = numbers => {
@@ -55,27 +55,33 @@ const onlyEven = numbers => {
   return numbers.filter(myArray);
 };
 
-const removeNthElement2 = (index, array) => {};
+const removeNthElement2 = (index, array) => {
+  const newArray = [...array];
+  newArray.splice(index, 1);
+  return newArray;
+};
 
 //not working
 const elementsStartingWithAVowel = strings => {
-  const vowels = 'aeiou';
-  return vowels.includes(strings.charAt(0));
+  const vowelArray = strings.filter(item => item.charCodeAt(0) === /a-z/i);
+  return vowelArray;
 };
 
 const removeSpaces = string => {
   return string.replace(/ /g, '');
 };
-//not working
+
 const sumNumbers = numbers => {
-  const array = sumNumbers.reduce((acc, val) => acc + val, 0);
-  return numbers(array);
+  const sum = numbers.reduce((accum, value) => {
+    return accum + value;
+  }, 0);
+  return sum;
 };
-//not working
+
 const sortByLastLetter = strings => {
-  strings
-    .split('')
-    .sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1));
+  return strings.sort(
+    (a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1)
+  );
 };
 
 module.exports = {
