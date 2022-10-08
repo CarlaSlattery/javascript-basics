@@ -63,9 +63,11 @@ const removeNthElement2 = (index, array) => {
 
 //not working
 const elementsStartingWithAVowel = strings => {
-  const vowelArray = strings.filter(item => item.charCodeAt(0) === /a-z/i);
-  return vowelArray;
-};
+  const vowelArray = strings.filter(item => item.charCode(0)){
+return item === (/a-z/i);
+  }
+  };
+
 
 const removeSpaces = string => {
   return string.replace(/ /g, '');
